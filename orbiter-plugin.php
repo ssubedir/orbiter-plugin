@@ -96,7 +96,7 @@ function so_post_40744782( $new_status, $old_status, $post ) {
 	}
 
 
-	$url = 'https://api.orbiter.ml/api/community/v1/thread/new';
+	$url = 'https://api.orbiter.ml/api/community/thread/new';
 	
 	$data = array(
 		'api_key' => $myoptions, 
@@ -121,17 +121,17 @@ function so_post_40744782( $new_status, $old_status, $post ) {
 			
 			if(file_exists($post_log)){
 				$file = fopen($post_log,'a');
-				fwrite($file,$message."\n");
-				fwrite($file,$myoptions."\n");
-				fwrite($file,$link."\n");
-				fwrite($file,'Response:'.$error,' \n');	
+				// fwrite($file,$message."\n");
+				// fwrite($file,$myoptions."\n");
+				// fwrite($file,$link."\n");
+				// fwrite($file,'Response:'.$error,' \n');	
 			}
 			else{
 				$file = fopen($post_log,'w');
-				fwrite($file,$message."\n");
-				fwrite($file,$myoptions."\n");
-				fwrite($file,$link."\n");
-				fwrite($file,'Response:'.$error,' \n');	
+				// fwrite($file,$message."\n");
+				// fwrite($file,$myoptions."\n");
+				// fwrite($file,$link."\n");
+				// fwrite($file,'Response:'.$error,' \n');	
 			}
 
 	} else {
@@ -139,17 +139,17 @@ function so_post_40744782( $new_status, $old_status, $post ) {
 
 		if(file_exists($post_log)){
 			$file = fopen($post_log,'a');
-			fwrite($file,$message."\n");
-					fwrite($file,$myoptions."\n");
-					fwrite($file,$link."\n");
-			fwrite($file,'Response:'.$content,' \n');	
+			// fwrite($file,$message."\n");
+			// 		fwrite($file,$myoptions."\n");
+			// 		fwrite($file,$link."\n");
+			// fwrite($file,'Response:'.$content,' \n');	
 		}
 		else{
 			$file = fopen($post_log,'w');
-			fwrite($file,$message."\n");
-					fwrite($file,$myoptions."\n");
-					fwrite($file,$link."\n");
-			fwrite($file,'Response:'.$content,' \n');	
+			// fwrite($file,$message."\n");
+			// 		fwrite($file,$myoptions."\n");
+			// 		fwrite($file,$link."\n");
+			// fwrite($file,'Response:'.$content,' \n');	
 		} 		
 	}
 
